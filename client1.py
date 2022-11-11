@@ -35,11 +35,11 @@ players=[Player(SPACESHIP_WIDTH,SPACESHIP_HEIGHT,'spaceship_yellow.png',90,10,[]
 
 def read_pos(str):
     str = str.split(",")
-    return int(str[0]), int(str[1]) ,int(str[2]),int(str[3]), int(str[4]),int(str[5])#,int(str[6])
+    return int(str[0]), int(str[1]) ,int(str[2]),int(str[3]), int(str[4])
 
 
 def make_pos(tup):
-    return str(tup[0]) + "," + str(tup[1]) + "," + str(tup[2]) + "," + str(tup[3]) + "," + str(tup[4]) + "," + str(tup[5])# + "," + str(tup[6])  
+    return str(tup[0]) + "," + str(tup[1]) + "," + str(tup[2]) + "," + str(tup[3]) + "," + str(tup[4])  
 
 
 def bullets_read(str):
@@ -62,14 +62,12 @@ def main():
     while run:
         clock.tick(FPS)
         if int(player_number)==0:
-            p2Pos = read_pos(n.send(make_pos((player_number,player1.x, player1.y,player1.health,player2.health,player1.bullets))))
+            p2Pos = read_pos(n.send(make_pos((player_number,player1.x, player1.y,player1.health,player2.health))))
         else:
-            p2Pos = read_pos(n.send(make_pos((player_number,player1.x, player1.y,player2.health,player1.health,player2.bullets))))
+            p2Pos = read_pos(n.send(make_pos((player_number,player1.x, player1.y,player2.health,player1.health))))
     
         player2.x = p2Pos[1]
         player2.y = p2Pos[2]
-        #player1.bullets=p2Pos[5]
-        #player2.bullets=p2Pos[6]
         if int(player_number)==0:
             player1.health=min(player1.health,p2Pos[3])
             player2.health=min(player2.health,p2Pos[4])

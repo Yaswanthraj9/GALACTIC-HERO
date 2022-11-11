@@ -7,7 +7,6 @@ class Network:
         self.port = 8000
         self.addr = (self.server, self.port)
         self.p = self.connect()
-        self.values=[]
 
     def getP(self):
         return self.p
