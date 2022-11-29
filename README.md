@@ -1,6 +1,6 @@
 # GALACTIC-HERO 
 
-“Galactic Hero” is a space game using Pygame and Socket Programming. There are 2 characters in the game,
+“Galactic Hero” is a space shooter game using Pygame and Socket Programming. There are 2 characters in the game,
 
 “Lightyear” is the main protagonist. The famed Space Ranger is known for heroism and bravery. Lightyear often suggests that his archenemy Emperor Zurg is behind every evil plot and is often proven correct. He also owns a house on Capital Planet, though, as they all look alike and his duties often keep him away, he is confused over just which one is his.
 
