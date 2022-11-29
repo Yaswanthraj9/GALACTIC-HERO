@@ -13,12 +13,12 @@ Two players control different ships. Space Shooter is a fixed shooter in which o
 The goal is to eliminate the opponent before he/she does.
 
 
-#Implementation
+# Implementation
 
-1.The server starts and generates the initial state.
-2.As each client connects, they are sent a full copy of the game state.
-3.The client takes their turn - their move is sent via a network message to the server.
-4.The server makes sure that the move is valid If not, it sends a reply message to the client telling it that their action failed
+1. The server starts and generates the initial state.
+2. As each client connects, they are sent a full copy of the game state.
+3. The client takes their turn - their move is sent via a network message to the server.
+4. The server makes sure that the move is valid If not, it sends a reply message to the client telling it that their action failed
 5. Assuming validation is succeeding, the authoritative game state is modified.
 6. New game state is replicated to all clients.
 7. When each client gets the new state update, the client re-renders the game UI.
